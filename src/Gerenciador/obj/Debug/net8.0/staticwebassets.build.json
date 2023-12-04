@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cJ+SxYbCnKlVccsqHjM100bTwSGc8Q2svmKopWao8WE=",
+  "Hash": "h8XGPcfvhUEjl4ykxbr5HapTsM1CKtXxW84eu3xB/DM=",
   "Source": "Gerenciador",
   "BasePath": "_content/Gerenciador",
   "Mode": "Default",
@@ -55,6 +55,25 @@
       "OriginalItemSpec": "C:\\Users\\samuel.oliveira\\Documents\\ASP.NET\\GerenciadorAcademico\\src\\Gerenciador\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Gerenciador.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\samuel.oliveira\\Documents\\ASP.NET\\GerenciadorAcademico\\src\\Gerenciador\\wwwroot\\css\\main.css",
+      "SourceId": "Gerenciador",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\samuel.oliveira\\Documents\\ASP.NET\\GerenciadorAcademico\\src\\Gerenciador\\wwwroot\\",
+      "BasePath": "_content/Gerenciador",
+      "RelativePath": "css/main.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\main.css"
+    },
+    {
       "Identity": "C:\\Users\\samuel.oliveira\\Documents\\ASP.NET\\GerenciadorAcademico\\src\\Gerenciador\\wwwroot\\css\\site.css",
       "SourceId": "Gerenciador",
       "SourceType": "Discovered",
@@ -91,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\samuel.oliveira\\Documents\\ASP.NET\\GerenciadorAcademico\\src\\Gerenciador\\wwwroot\\images\\classroom.jpg",
+      "SourceId": "Gerenciador",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\samuel.oliveira\\Documents\\ASP.NET\\GerenciadorAcademico\\src\\Gerenciador\\wwwroot\\",
+      "BasePath": "_content/Gerenciador",
+      "RelativePath": "images/classroom.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\classroom.jpg"
     },
     {
       "Identity": "C:\\Users\\samuel.oliveira\\Documents\\ASP.NET\\GerenciadorAcademico\\src\\Gerenciador\\wwwroot\\js\\site.js",

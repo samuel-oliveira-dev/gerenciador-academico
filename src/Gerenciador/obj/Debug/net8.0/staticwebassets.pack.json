@@ -5,12 +5,20 @@
       "PackagePath": "staticwebassets\\Gerenciador.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\samuel.oliveira\\Documents\\ASP.NET\\GerenciadorAcademico\\src\\Gerenciador\\wwwroot\\css\\main.css",
+      "PackagePath": "staticwebassets\\css\\main.css"
+    },
+    {
       "Id": "C:\\Users\\samuel.oliveira\\Documents\\ASP.NET\\GerenciadorAcademico\\src\\Gerenciador\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Users\\samuel.oliveira\\Documents\\ASP.NET\\GerenciadorAcademico\\src\\Gerenciador\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\samuel.oliveira\\Documents\\ASP.NET\\GerenciadorAcademico\\src\\Gerenciador\\wwwroot\\images\\classroom.jpg",
+      "PackagePath": "staticwebassets\\images\\classroom.jpg"
     },
     {
       "Id": "C:\\Users\\samuel.oliveira\\Documents\\ASP.NET\\GerenciadorAcademico\\src\\Gerenciador\\wwwroot\\js\\site.js",

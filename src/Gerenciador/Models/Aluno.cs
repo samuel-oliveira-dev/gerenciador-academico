@@ -25,6 +25,7 @@ namespace Gerenciador.Models
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
         [Compare("Email", ErrorMessage = "Os emails não são iguais")]
         [NotMapped]
+        [Display(Name = "Confirme o Email")]
         public string EmailConfirmacao { get; set; }
     }
 }

@@ -12,7 +12,8 @@ namespace Gerenciador.Models
         [StringLength(200, ErrorMessage="O nome da disciplina deve conter ao menos {1} caracteres")]
         public string? NomeDisciplina { get; set; }
 
-        [ForeignKey("Professor")]
-        public int IdProfessor {  get; set; } 
+        [ForeignKey("IdProfessor")]
+        public Professor? Professor {  get; set; } 
+       
     }
 }

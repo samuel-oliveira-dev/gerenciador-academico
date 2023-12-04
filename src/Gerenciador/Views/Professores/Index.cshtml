@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Professor>
+
+<a asp-action="Create" class="btn btn-outline-primary">Novo</a>
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.DataNascimento)
+            </th>
+            <th class="col">
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th class="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach(var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(model=> item.Nome)</td>
+                    <td>@Html.DisplayFor(model => item.DataNascimento)</td>
+                    <td>@Html.DisplayFor(model => item.Email)</td>
+                    <td>
+                        <a class="btn btn-primary" asp-action="Editar" asp-route-id="@item.Id">Editar</a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
