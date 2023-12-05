@@ -25,3 +25,9 @@ body {
     border-radius: 8px;
 
 }
+
+.item-slider {
+    width:35px;
+    height:10px;
+    background-color:white;
+}

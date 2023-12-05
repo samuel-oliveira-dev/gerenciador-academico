@@ -26,6 +26,6 @@ namespace Gerenciador.Models
         [Compare("Email", ErrorMessage = "Os emails não são iguais")]
         [NotMapped]
         [Display(Name = "Confirme o Email")]
-        public string EmailConfirmacao { get; set; }
+        public string? EmailConfirmacao { get; set; }
     }
 }

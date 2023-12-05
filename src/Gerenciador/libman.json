@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "ajax-bootstrap-select@1.4.5",
+      "destination": "wwwroot/lib/ajax-bootstrap-select/"
+    },
+    {
+      "library": "ajaxrequest.js@2.1.9",
+      "destination": "wwwroot/lib/ajaxrequest.js/"
+    }
+  ]
+}

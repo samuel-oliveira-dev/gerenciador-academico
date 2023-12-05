@@ -41,7 +41,33 @@ namespace Gerenciador.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        public async Task<IActionResult> Edit()
+        public async Task<IActionResult> Edit(int Id)
+        {
+            var aluno = await _context.Alunos.FindAsync(Id);
+            
+            return View(aluno);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int Id, [Bind("Nome,Email,Id,EmailConfirmacao,DataNascimento")]Aluno aluno)
+        {
+
+           
+            
+            if(ModelState.IsValid)
+            {
+                ModelState.Remove("EmailConfirmacao");
+                _context.Update(aluno);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index)); 
+            } else 
+            { 
+                return View(aluno); 
+            }
+        }
+
+        public async Task<IActionResult> Delete(int Id)
         {
             return View();
         }
