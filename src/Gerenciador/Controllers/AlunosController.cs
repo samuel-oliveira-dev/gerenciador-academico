@@ -67,9 +67,16 @@ namespace Gerenciador.Controllers
             }
         }
 
+        [HttpPost("excluir/{Id}"), ActionName("Delete")]
         public async Task<IActionResult> Delete(int Id)
         {
-            return View();
+            var aluno = await _context.Alunos.FindAsync(Id);
+            if(aluno != null)
+            {
+                _context.Remove(aluno);
+                await _context.SaveChangesAsync();
+            }
+            return RedirectToAction(nameof(Index));
         }
     }
 }
