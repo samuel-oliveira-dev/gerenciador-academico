@@ -27,5 +27,13 @@ namespace Gerenciador.Models
         [NotMapped]
         [Display(Name = "Confirme o Email")]
         public string? EmailConfirmacao { get; set; }
+
+        [NotMapped]
+        [Display(Name ="Imagem do Aluno")]
+        public IFormFile ImagemUpload { get; set; }
+
+        public string? ImagemNome { get; set; }
+
+
     }
 }

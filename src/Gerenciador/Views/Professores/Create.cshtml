@@ -1,7 +1,7 @@
 ﻿@model Professor
 <div class="row" style="">
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form enctype="multipart/form-data" asp-action="Create">
             <div class="form-group mb-3" >
                 <label asp-for="Nome"></label>
                 <input asp-for="Nome" class="form-control"/>

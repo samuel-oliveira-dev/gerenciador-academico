@@ -6,7 +6,7 @@
         <img src="~/images/classroom.jpg" class="img-fluid imagem"/>
     </div>
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form enctype="multipart/form-data" asp-action="Create">
             <div class="form-group mb-3">
                 <label asp-for="Nome"></label>
                 <input asp-for="Nome" class="form-control"/>
@@ -26,6 +26,9 @@
                 <label asp-for="EmailConfirmacao"></label>
                 <input asp-for="EmailConfirmacao" class="form-control" />
                 <span asp-validation-for="EmailConfirmacao" class="text-danger"></span>
+            </div>
+            <div>
+
             </div>
             <input type="submit" value="Enviar" btn btn-info class="mb-3"/>
         </form>

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Gerenciador.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Gerenciador.Controllers
 {
@@ -15,6 +16,7 @@ namespace Gerenciador.Controllers
             _context = context;
         }
 
+        [Authorize]
         public async Task<IActionResult> Index()
         {
 

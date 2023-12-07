@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Gerenciador.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Gerenciador.Controllers
 {
@@ -10,6 +11,7 @@ namespace Gerenciador.Controllers
 
         readonly AppDbContext _context = context;
 
+        //[Authorize]
         public async Task<IActionResult> Index()
         {
             
@@ -24,18 +26,24 @@ namespace Gerenciador.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Nome,Email,EmailConfirmacao,DataNascimento")]Aluno aluno)
+        public async Task<IActionResult> Create([Bind("Nome,Email,EmailConfirmacao,DataNascimento,ImagemUpload")]Aluno aluno)
         {
             
             if(ModelState.IsValid)
             {
+                var imgPrefixo = Guid.NewGuid() + "_";
+                if(!await UploadArquivo(aluno.ImagemUpload, imgPrefixo))
+                {
+                    return View(aluno);
+                }
+
+                aluno.ImagemNome = imgPrefixo + aluno.ImagemUpload.FileName;
                 _context.Add(aluno);
                 await _context.SaveChangesAsync();
             } else
             {
                 return View(aluno);
             }
-            //lógica para responder POST
 
 
             return RedirectToAction(nameof(Index));
@@ -77,6 +85,28 @@ namespace Gerenciador.Controllers
                 await _context.SaveChangesAsync();
             }
             return RedirectToAction(nameof(Index));
+        }
+
+        private async Task<bool> UploadArquivo(IFormFile arquivo, string imgPrefixo)
+        {
+            if(arquivo.Length <= 0)
+            {
+                return false;
+            }
+
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", imgPrefixo + arquivo.FileName);
+            if(System.IO.File.Exists(path))
+            {
+                ModelState.AddModelError(string.Empty, "Já existe um arquivo com esse nome!");
+                return false;
+            }
+
+            using (var stream = new FileStream(path, FileMode.Create))
+            {
+                await arquivo.CopyToAsync(stream);
+            }
+
+            return true;
         }
     }
 }
